@@ -1,8 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LandingPage from "./components/LandingPage";
+import Room from "./components/Room";
+
 function App() {
   return (
-    <>
-      <h1 className="font-bold text-xl">hello</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/room" element={<Room />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
